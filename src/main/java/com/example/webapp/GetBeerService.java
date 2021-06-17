@@ -44,19 +44,19 @@ public class GetBeerService {
 
         //Using the JSON simple library parse the string into a json object
         JSONObject data_obj = (JSONObject) parse.parse(inline);
-        JSONObject obj = (JSONObject) data_obj.get("data");
-        JSONObject style = (JSONObject) obj.get("style");
-        JSONArray brew = (JSONArray) obj.get("breweries");
+        JSONObject data = (JSONObject) data_obj.get("data");
+        JSONObject style = (JSONObject) data.get("style");
+        JSONArray brew = (JSONArray) data.get("breweries");
 
 
-        beerData.put("beerName", style.get("name").toString());
+        beerData.put("beerName", data.get("name").toString());
         beerData.put("beerDescription", style.get("description").toString());
         beerData.put("beerShortName", style.get("shortName").toString());
 
 
         for (Object o : brew) {
-          JSONObject new_obj = (JSONObject) o;
-          beerData.put("breweryName", new_obj.get("name").toString());
+          JSONObject breweries = (JSONObject) o;
+          beerData.put("breweryName", breweries.get("name").toString());
         }
 
         beerMap = beerData;
