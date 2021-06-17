@@ -8,5 +8,11 @@ be then viewed on the browser (http://localhost:8080/)
 
 Using a RESTApi I then rendered chosen values to http://localhost:8080/api/beer
 
+Simply download this application in a zip file, open in your chosen IDE and run the WebappApplication classes main method. 
 
+Once the server has succesfully started you can navigate to: 
 
+1. http://localhost:8080/ - to find a rendered page 
+2. http://localhost:8080/api/beer - to find the raw data from the RESTApi
+
+Thank you!
