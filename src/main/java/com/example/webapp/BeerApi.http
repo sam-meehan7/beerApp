@@ -1,0 +1,4 @@
+GET https://api.brewerydb.com/v2/beer/random/?withBreweries=Y&hasLabels=Y&key=a5c1b917e7ba62dcd79f434ed73bc72d
+Accept: application/json
+
+###
